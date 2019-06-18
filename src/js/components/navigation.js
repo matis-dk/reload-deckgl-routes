@@ -244,12 +244,12 @@ class Options extends React.Component {
             <OptionContainer>
                 <H3>Options</H3>
                 <Div css={{display: "flex", padding: "10px 0px" }}>
-                    <Div css={{display: 'flex', flexDirection: "column" }}>
-                        <Span>Play / Pause</Span>
+                    <Div css={{display: 'flex', flexDirection: "column"}}>
+                        <Span css={{ marginBottom: "5px" }}>Play / Pause</Span>
                         <Switch onClick={onToggleAnimate} defaultChecked />
                     </Div>
                     <Div css={{display: 'flex', flexDirection: "column", marginLeft: "20px"}}>
-                        <Span>Switch dataset</Span>
+                        <Span css={{ marginBottom: "5px" }}>Switch dataset</Span>
                         <Switch onClick={handleChangeDataset} defaultChecked />
                     </Div>
                 </Div>
