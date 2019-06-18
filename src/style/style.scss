@@ -1,0 +1,235 @@
+
+/*
+    // ==================== IMPORT ==================== \\
+   ||                                                   ||
+   \\--------------------------------------------------//
+*/
+
+// ==================== BASE FOLDER ==================== \\
+@import 'base/colors';
+@import 'base/typography';
+@import 'base/reset';
+
+
+// ================= COMPONENTS FOLDER ================= \\
+@import 'components/animations';
+@import 'components/button';
+@import 'components/input';
+@import 'components/media';
+
+// =================== HELPERS FOLDER =================== \\
+@import 'helpers/placeholders';
+@import 'helpers/mixins';
+@import 'helpers/functions';
+
+
+// =================== PAGES FOLDER =================== \\
+@import 'pages/home';
+
+// =================== LAYOUT FOLDER =================== \\
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/section-main';
+
+.rc-slider-tooltip {
+    z-index: 4 !important;
+}
+
+.rc-slider:hover {
+    .rc-slider-track {
+        background-color: rgba(#5c5edc, 0.8) !important;
+    }
+}
+
+.rc-slider-track {
+    transition: 0.3s;
+    background-color: rgba(#5c5edc, 0.4) !important;
+    height: 6px !important;
+}
+
+.rc-slider-rail {
+    height: 6px !important;
+}
+
+.rc-slider-handle {
+    border-color: #5c5edc !important;
+    height: 16px !important;
+    width: 16px !important;
+}
+
+.rc-slider-tooltip-inner {
+    box-shadow: none !important;
+    border-radius: 2px !important;
+    background-color: rgba(#373737, 0.8) !important;
+}
+
+.rc-slider-tooltip-arrow {
+    border-top-color: rgba(#373737, 0.8) !important;
+}
+
+
+//--------------------------
+
+.rc-checkbox-checked .rc-checkbox-inner {
+    background-color: rgba(#5c5edc, 0.4) !important;
+    border-color: rgba(#5c5edc, 0.4) !important;
+}
+
+
+//--------------------------
+
+.rc-switch {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 44px;
+    height: 22px;
+    line-height: 20px;
+    vertical-align: middle;
+    border-radius: 20px 20px;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+  }
+  .rc-switch-inner {
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    left: 24px;
+  }
+  .rc-switch:after {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 2px;
+    top: 1px;
+    border-radius: 50% 50%;
+    background-color: #fff;
+    content: " ";
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    transition: left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+    -webkit-animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
+            animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-name: rcSwitchOff;
+            animation-name: rcSwitchOff;
+  }
+  .rc-switch:hover:after {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-animation-name: rcSwitchOn;
+            animation-name: rcSwitchOn;
+  }
+  .rc-switch:focus {
+    box-shadow: 0 0 0 2px #d5f1fd;
+    outline: none;
+  }
+  .rc-switch-checked {
+    border: 1px solid #5c5edc;
+    background-color: #5c5edc;
+  }
+  .rc-switch-checked .rc-switch-inner {
+    left: 6px;
+  }
+  .rc-switch-checked:after {
+    left: 22px;
+  }
+  .rc-switch-disabled {
+    cursor: no-drop;
+    background: #ccc;
+    border-color: #ccc;
+  }
+  .rc-switch-disabled:after {
+    background: #9e9e9e;
+    -webkit-animation-name: none;
+            animation-name: none;
+    cursor: no-drop;
+  }
+  .rc-switch-disabled:hover:after {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-name: none;
+            animation-name: none;
+  }
+  .rc-switch-label {
+    display: inline-block;
+    line-height: 20px;
+    font-size: 14px;
+    padding-left: 10px;
+    vertical-align: middle;
+    white-space: normal;
+    pointer-events: none;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
+  }
+  @-webkit-keyframes rcSwitchOn {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.25);
+              transform: scale(1.25);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+  }
+  @keyframes rcSwitchOn {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.25);
+              transform: scale(1.25);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+  }
+  @-webkit-keyframes rcSwitchOff {
+    0% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes rcSwitchOff {
+    0% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+// .rc-slider-mark{
+//     padding-top:7px;
+// }
+// .rc-slider-step{
+//     span{
+//         background-color: rgb(44, 71, 112);
+// border-color: rgb(44, 71, 112);
+//     }
+// }
+// .rc-slider-handle{
+//     background-color: #5bc0de;
+//     border-color: #5bc0de;
+// }
+
+// ================== VENDORS FOLDER ================== \\

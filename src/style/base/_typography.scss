@@ -1,0 +1,18 @@
+/* ==================== TYPOGRAPHY ==================== */
+
+// FONT SIZES
+$font-size-small	       :12px;
+$font-size-regular         :16px;
+$font-size-large	       :24px;
+$font-size-x-large         :32px;
+$font-size-xx-large	       :48px;
+$font-size-xxx-large	   :64px;
+$font-size-xxxx-large	   :96px;
+
+
+@font-face {
+  font-family: 'MyFont';
+  src:  url('../fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
