@@ -1,3 +1,3 @@
-# Minimal React starterpack
+# Mapbox with React and Deck.GL
 
 Let's go!
